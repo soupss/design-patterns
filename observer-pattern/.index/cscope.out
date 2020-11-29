@@ -1,0 +1,410 @@
+cscope 15 $HOME/Dev/Repos/design-patterns/observer-pattern               0000002052
+	@inc/iobservable.hpp
+
+1 #i‚de‡
+IOBSERVABLE_HPP
+
+
+2 
+	#IOBSERVABLE_HPP
+
+
+	)
+
+3 
+	~"iob£rvî.hµ
+"
+
+5 ˛as†
+	cIOb£rvabÀ
+
+
+7 
+	mpublic
+:
+
+8 
+vútuÆ
+ ~
+IOb£rvabÀ
+() = ;
+
+9 
+vútuÆ
+ 
+ªgi°îOb£rvî
+(
+IOb£rvî
+* 
+_ob£rvî
+) = 0;
+
+10 
+vútuÆ
+ 
+uƒegi°îOb£rvî
+(
+IOb£rvî
+* 
+_ob£rvî
+) = 0;
+
+11 
+vútuÆ
+ 
+nŸify
+() = 0;
+
+	@inc/iobserver.hpp
+
+1 #i‚de‡
+IOBSERVER_HPP
+
+
+2 
+	#IOBSERVER_HPP
+
+
+	)
+
+4 ˛as†
+	cIOb£rvî
+
+
+6 
+	mpublic
+:
+
+7 
+vútuÆ
+ ~
+IOb£rvî
+() = ;
+
+8 
+vútuÆ
+ 
+upd©e
+() = 0;
+
+	@inc/phonedisplay.hpp
+
+1 #i‚de‡
+PHONEDISPLAY_HPP
+
+
+2 
+	#PHONEDISPLAY_HPP
+
+
+	)
+
+3 
+	~"iob£rvî.hµ
+"
+
+5 ˛as†
+	cPh⁄eDi•œy
+ : 
+public
+ 
+IOb£rvî
+
+
+7 
+public
+:
+
+8 
+	$upd©e
+(Ë
+ovîride
+;
+
+	@inc/weatherstation.hpp
+
+1 #i‚de‡
+WEATHERSTATION_HPP
+
+
+2 
+	#WEATHERSTATION_HPP
+
+
+	)
+
+3 
+	~<ve˘‹
+>
+
+4 
+	~"iob£rvabÀ.hµ
+"
+
+5 
+	~"iob£rvî.hµ
+"
+
+7 ˛as†
+	cWóthîSèti⁄
+ : 
+public
+ 
+IOb£rvabÀ
+
+
+9 
+public
+:
+
+10 
+	$ªgi°îOb£rvî
+(
+IOb£rvî
+* 
+_ob£rvî
+Ë
+ovîride
+;
+
+11 
+	$uƒegi°îOb£rvî
+(
+IOb£rvî
+* 
+_ob£rvî
+Ë
+ovîride
+;
+
+12 
+	$nŸify
+(Ë
+ovîride
+;
+
+13 
+¥iv©e
+:
+
+14 
+ãm≥øtuª
+;
+
+15 
+°d
+::
+ve˘‹
+<
+IOb£rvî
+*> 
+ob£rvîs
+;
+
+	@src/iobservable.cpp
+
+	@src/main.cpp
+
+1 
+	~<io°ªam
+>
+
+2 
+	~"wóthî°©i⁄.hµ
+"
+
+3 
+	~"ph⁄edi•œy.hµ
+"
+
+5 
+	$maö
+()
+
+7 
+WóthîSèti⁄
+* 
+°©i⁄
+ = 
+√w
+ 
+	`WóthîSèti⁄
+();
+
+8 
+Ph⁄eDi•œy
+* 
+pDi•œy
+ = 
+√w
+ 
+	`Ph⁄eDi•œy
+();
+
+10 
+°©i⁄
+->
+	`ªgi°îOb£rvî
+(
+pDi•œy
+);
+
+12 
+ãmp
+;
+
+13 
+åue
+)
+
+15 
+°d
+::
+cö
+ >> 
+ãmp
+;
+
+16 
+°©i⁄
+.
+	`£tTem≥øtuª
+(
+ãmp
+)
+
+17 
+°©i⁄
+->
+	`nŸify
+();
+
+21 
+dñëe
+ 
+°©i⁄
+;
+
+22 
+dñëe
+ 
+pDi•œy
+;
+
+23 
+	}
+}
+
+	@src/phonedisplay.cpp
+
+1 
+	~<io°ªam
+>
+
+2 
+	~"ph⁄edi•œy.hµ
+"
+
+4 
+	gPh⁄eDi•œy
+::
+	$upd©e
+()
+
+6 
+°d
+::
+cout
+ << "ph⁄êdi•œy: " << std::
+ídl
+;
+
+7 
+	}
+}
+
+	@src/weatherstation.cpp
+
+1 
+	~"wóthî°©i⁄.hµ
+"
+
+3 
+	gWóthîSèti⁄
+::
+	$ªgi°îOb£rvî
+(
+IOb£rvî
+* 
+_ob£rvî
+)
+
+5 
+this
+->
+ob£rvîs
+.
+	`push_back
+(
+_ob£rvî
+);
+
+6 
+	}
+}
+
+8 
+	gWóthîSèti⁄
+::
+	$uƒegi°îOb£rvî
+(
+IOb£rvî
+* 
+_ob£rvî
+)
+
+11 
+	}
+}
+
+13 
+WóthîSèti⁄
+::
+	$nŸify
+()
+
+15 
+IOb£rvî
+* 
+ob£rvî
+ : 
+this
+->
+ob£rvîs
+)
+
+17 
+ob£rvî
+->
+	`upd©e
+();
+
+19 
+	}
+}
+
+	@
+1
+.
+1
+/usr/include
+8
+159
+inc/iobservable.hpp
+inc/iobserver.hpp
+inc/phonedisplay.hpp
+inc/weatherstation.hpp
+src/iobservable.cpp
+src/main.cpp
+src/phonedisplay.cpp
+src/weatherstation.cpp
